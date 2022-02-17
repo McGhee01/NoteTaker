@@ -3,7 +3,7 @@ const express = require('express');
 // importing file path resolution
 const path = require('path');
 // const noteData = require('./db/db.json');
-const api = require('./routes/index.js');
+const api = require('./public/assets/routes/index.js');
 // defining the port variable
 const PORT =  process.env.PORT || 3001;
 // creating out server object
