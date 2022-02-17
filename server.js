@@ -3,7 +3,7 @@ const express = require('express');
 // importing file path resolution
 const path = require('path');
 // const noteData = require('./db/db.json');
-const api = require('./public/assets/routes/index.js');
+const api = require('./routes/index.js');
 // defining the port variable
 const PORT =  process.env.PORT || 3001;
 // creating out server object
@@ -34,7 +34,7 @@ const {
   readFromFile,
   readAndAppend,
   writeToFile,
-} = require('../helpers/fsUtils');
+} = require('/helpers/fsUtils.js');
 // GET Route for retrieving all the notes
 router.get('/', (req, res) => {
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
