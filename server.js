@@ -49,9 +49,4 @@ router.post('/', (req, res) => {
         text,
         note_id: uuidv4(),
       };
-      readAndAppend(newNote, './db/db.json');
-      res.json(`Note added successfully :rocket:`);
-    } else {
-      res.error('Error in adding Note');
-    }
-  });
+
