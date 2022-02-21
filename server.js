@@ -13,15 +13,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', api);
 // determines the supporting assets are getting pulled from
-app.use(express.static('public'));
+// app.use(express.static('public'));
 // HTML ROUTES
 // GET http://localhost:3001/notes
 // changed '/' to '/notes'
 app.get('/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, './public/notes.html'));
+  res.sendFile(path.join(__dirname, './notes.html'));
 });
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './public/index.html'));
+  res.sendFile(path.join(__dirname, './index.html'));
 });
 app.listen(PORT, () =>
   console.log(`Example app listening at http://localhost:${PORT}`)
