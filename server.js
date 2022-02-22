@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', api);
 // determines the supporting assets are getting pulled from
-// app.use(express.static('public'));
+app.use(express.static('public'));
 // HTML ROUTES
 // GET http://localhost:3001/notes
 // changed '/' to '/notes'
